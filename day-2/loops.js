@@ -12,7 +12,9 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-
+for (let i = 0; i < arr.length; i++ ){
+  console.log(array[i]);
+}
   // YOUR CODE ABOVE HERE //
 }
 
@@ -22,7 +24,7 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  for (let i = 0; i < arr.length; i++) {//check each index
+  for (let i = 0; i < arr.length - 1; i--) {//check each index
     console.log(arr[i]);//print each array value at given index
   }
 }let tacos = ["beef", "chicken", "shrimp"];//assign array to taco variable
@@ -35,26 +37,22 @@ printArrayValues(tacos);//function call
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-
+return Object.keys(object);
   // YOUR CODE ABOVE HERE //
 }
 
-/**
- * Given an input Object, loop over the Object and print its keys
- * using console.log().
- */
-function printObjectKeys(object) {
-  // YOUR CODE BELOW HERE //
 
-  // YOUR CODE ABOVE HERE //
-}
 
 /**
  * Given an input Object, return an Array containing the Object's values.
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-
+  let values = [];
+  for (let key in object ){
+    values.push(object[key]);
+  }
+return  values;
   // YOUR CODE ABOVE HERE //
 }
 
@@ -64,7 +62,9 @@ function getObjectValues(object) {
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-
+for (let key in object) {
+  console.log(object[key]);
+}
   // YOUR CODE ABOVE HERE //
 }
 
@@ -73,6 +73,12 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
+var count = 0;
+for (let key in object) {
+  count++;
+}
+return count;
+
 
   // YOUR CODE ABOVE HERE //
 }
@@ -83,8 +89,15 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
+  let values = [];
+  for (let key in object) {
+    values.push(object[key]);
+  }
   // YOUR CODE ABOVE HERE //
+}
+for (let i = value.length-1; i>= onabort; i--){
+  console.log(values[i]);
+
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
