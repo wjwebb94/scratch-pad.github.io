@@ -21,7 +21,20 @@
 
 function reverseString(input) {
   // YOUR CODE BELOW HERE //
-
+  function reverseString(input) {
+    // YOUR CODE BELOW HERE //
+  let reversed = "";
+    //create storage string
+  for (let i = input.length - 1; i >= 0; i--){
+    //access each string index from last to first
+    reversed += input[i];
+    //add each letter per index to storage string
+  }
+  return reversed;
+    //function call
+  }
+  console.log(reverseString('Johnathan'));
+  //log to console to check
   // YOUR CODE ABOVE HERE //
 }
 

@@ -22,7 +22,11 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-
+  for (let i = 0; i < arr.length; i++) {//check each index
+    console.log(arr[i]);//print each array value at given index
+  }
+}let tacos = ["beef", "chicken", "shrimp"];//assign array to taco variable
+printArrayValues(tacos);//function call
   // YOUR CODE ABOVE HERE //
 }
 

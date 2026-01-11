@@ -16,34 +16,35 @@
 /*
 I: Function takes in an input string.
 O: Function returns the length of the input string.
-C:
-E:
+C: N/A
+E: N/A
 */
 
 function length(string) {
   // YOUR CODE BELOW HERE //
+return string.length;//counts letters
 
   // YOUR CODE ABOVE HERE //
 }
-
+console.log(length('notebook'));//8
 /**
  * Given an input String, return a new String forced to lowercase.
  */
 function toLowerCase(string) {
   // YOUR CODE BELOW HERE //
-
+return string.toLowerCase();
   // YOUR CODE ABOVE HERE //
 }
-
+console.log(toLowerCase('Taco Bell'));
 /**
  * Given an input String, return a new String forced to uppercase.
  */
 function toUpperCase(string) {
   // YOUR CODE BELOW HERE //
-
+  return string.toUpperCase();
   // YOUR CODE ABOVE HERE //
 }
-
+console.log(toUpperCase('Taco Bell'));
 /**
  * Given an input String, return a new String forced to dash-case.
  *
@@ -59,10 +60,12 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
   // YOUR CODE BELOW HERE //
-
+  let lowFirst = string.toLowerCase();//convert to lowercase
+  let dashCase = lowFirst.split(' ').join('-');//replace spaces with dashes
+return dashCase;//function call
   // YOUR CODE ABOVE HERE //
 }
-
+console.log(toDashCase('Get Off My Lawn!'));//check by logging to console
 /**
  * Given an input String and a single character, return true if the String
  * begins with the character, false otherwise. The Function is case insensitive.
@@ -77,7 +80,17 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
   // YOUR CODE BELOW HERE //
+  
+  if (string.length === 0 || char.length === 0) return false; // nothing there
 
+  // Convert both to lowercase
+  let firstChar = string[0].toLowerCase();//resolve to lowercase
+  let myChar = char.toLowerCase();//resolve to lowercase
+
+  return firstChar === myChar;//call return
+}
+    // YOUR CODE ABOVE HERE //
+    console.log(beginsWith('Pica', 'a'));/log to console for visual
   // YOUR CODE ABOVE HERE //
 }
 
@@ -95,7 +108,16 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
   // YOUR CODE BELOW HERE //
-
+  function endsWith(string, char) {
+    // YOUR CODE BELOW HERE //
+  if (string.length === 0 || char.length === 0)//if nothing there
+    return false;//do this
+    let lastChar = string[string.length -1].toLowerCase();
+    let endChar = char.toLowerCase();
+    return lastChar === endChar;//return indexed character only if it is the same as last character in  string
+  }
+    // YOUR CODE ABOVE HERE //
+    console.log(endsWith('Pica', 'a'));
   // YOUR CODE ABOVE HERE //
 }
 
@@ -106,9 +128,14 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-
+  return stringOne + stringTwo;
   // YOUR CODE ABOVE HERE //
 }
+console.log(concat('WendyJ', 'Webb'));
+
+
+
+
 
 /**
  * Given any number of Strings, return all of them joined together.
@@ -123,10 +150,10 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
   var args = Array.from(arguments);
-
+  return args.join('');//return strings joined
   // YOUR CODE ABOVE HERE //
 }
-
+console.log(join('Wendy', 'Joyce', 'Webb'));//visual check
 /**
  * Given two Strings, return the longest of the two.
  *
@@ -138,7 +165,11 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-
+  if (stringOne.length >= stringTwo.length) {
+    return stringOne;
+} else {
+    return stringTwo;
+}console.log(longest("Pica", "Doggie Treats")); // Expect Doggie Treats
   // YOUR CODE ABOVE HERE //
 }
 
@@ -151,10 +182,21 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
+  
+    let str1 = stringOne.toLowerCase();
+    let str2 = stringTwo.toLowerCase();
 
+    if (str1 === str2) return 0; // if strings =
+    return str1 < str2 ? 1 : -1; // first comes before → 1, else → -1
+}
   // YOUR CODE ABOVE HERE //
 }
-
+// Visual Check
+console.log(sortAscending("Wendy", "Pica")); // -1
+console.log(sortAscending("Java", "Script")); // 1
+console.log(sortAscending("flower", "flyer"));    // 1
+console.log(sortAscending("flyer", "flute"));    // -1
+console.log(sortAscending("he", "He"));    // 0
 /**
  * Given two Strings, return 1 if the first is lower in alphabetical order (meaning later in the alphabet) than
  * the second, return -1 if the second is lower in alphabetical order than the
@@ -164,7 +206,22 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-  
+  function sortDescending(stringOne, stringTwo) {
+    let s1 = stringOne.toLowerCase();
+    let s2 = stringTwo.toLowerCase();
+
+    if (s1 === s2) {
+        return 0;
+    } else if (s1 > s2) {
+        // first string comes later in the alphabet
+        return 1;
+    } else {
+        // second string comes later in the alphabet
+        return -1;
+    }
+}console.log(sortDescending("Xavier", "Delgado")); // 1  
+console.log(sortDescending("LSU", "Southern")); // -1
+console.log(sortDescending("OS", "OS")); // 0
   // YOUR CODE ABOVE HERE //
 }
 

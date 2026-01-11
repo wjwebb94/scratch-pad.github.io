@@ -12,7 +12,19 @@
  */
 function fizzBuzz() {
  // YOUR CODE BELOW HERE //
-
+ function fizzBuzz() {//function declaration
+  for (let i = 1; i <= 100; i++) {//count from 1 - 100
+      if (i % 3 === 0 && i % 5 === 0) {//assess numbers 1 - 100 for parameter divisibility
+          console.log("FizzBuzz");//do this for true conditions at i
+      } else if (i % 3 === 0) {//condition check 1
+          console.log("Fizz");//check 1 true do this
+      } else if (i % 5 === 0) {//condition check 2
+          console.log("Buzz");//check 2 true do this
+      } else {//if check 1 and 2 are false
+          console.log(i);//do this last resort
+      }
+  }
+}fizzBuzz();
  // YOUR CODE ABOVE HERE //
 }
 
