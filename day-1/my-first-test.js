@@ -18,11 +18,11 @@
 
 function print(value) {
   // YOUR CODE BELOW HERE //
-return value;
-} console.log(print(757));//should print 757
-
-  // YOUR CODE ABOVE HERE //
+console.log(value);//should print called value
 }
+print(757);
+  // YOUR CODE ABOVE HERE //
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (

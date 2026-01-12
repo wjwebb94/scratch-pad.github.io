@@ -23,10 +23,14 @@ E: N/A
 function length(string) {
   // YOUR CODE BELOW HERE //
 return string.length;//counts letters
-
-  // YOUR CODE ABOVE HERE //
 }
-console.log(length('notebook'));//8
+  // YOUR CODE ABOVE HERE //
+
+console.log(length("notebook"));//8
+
+
+
+
 /**
  * Given an input String, return a new String forced to lowercase.
  */
@@ -90,7 +94,7 @@ function beginsWith(string, char) {
   return firstChar === myChar;//call return
 }
     // YOUR CODE ABOVE HERE //
-    console.log(beginsWith('Pica', 'a'));/log to console for visual
+    console.log(beginsWith('Pica', 'a'));//log to console for visual
   // YOUR CODE ABOVE HERE //
 }
 
@@ -108,8 +112,6 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
   // YOUR CODE BELOW HERE //
-  function endsWith(string, char) {
-    // YOUR CODE BELOW HERE //
   if (string.length === 0 || char.length === 0)//if nothing there
     return false;//do this
     let lastChar = string[string.length -1].toLowerCase();
@@ -117,9 +119,9 @@ function endsWith(string, char) {
     return lastChar === endChar;//return indexed character only if it is the same as last character in  string
   }
     // YOUR CODE ABOVE HERE //
-    console.log(endsWith('Pica', 'a'));
+    console.log(endsWith('Pica', 'a'));//true
   // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given two input Strings, return the Strings concatenated into one.
@@ -169,9 +171,10 @@ function longest(stringOne, stringTwo) {
     return stringOne;
 } else {
     return stringTwo;
+}
 }console.log(longest("Pica", "Doggie Treats")); // Expect Doggie Treats
   // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given two Strings, return 1 if the first string is higher in alphabetical order (meaning earlier in the alphabet) than
@@ -190,7 +193,7 @@ function sortAscending(stringOne, stringTwo) {
     return str1 < str2 ? 1 : -1; // first comes before → 1, else → -1
 }
   // YOUR CODE ABOVE HERE //
-}
+
 // Visual Check
 console.log(sortAscending("Wendy", "Pica")); // -1
 console.log(sortAscending("Java", "Script")); // 1
@@ -206,7 +209,7 @@ console.log(sortAscending("he", "He"));    // 0
  */
 function sortDescending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-  function sortDescending(stringOne, stringTwo) {
+  
     let s1 = stringOne.toLowerCase();
     let s2 = stringTwo.toLowerCase();
 
@@ -218,12 +221,12 @@ function sortDescending(stringOne, stringTwo) {
     } else {
         // second string comes later in the alphabet
         return -1;
-    }
-}console.log(sortDescending("Xavier", "Delgado")); // 1  
+    }}
+console.log(sortDescending("Xavier", "Delgado")); // 1  
 console.log(sortDescending("LSU", "Southern")); // -1
 console.log(sortDescending("OS", "OS")); // 0
   // YOUR CODE ABOVE HERE //
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (

@@ -30,7 +30,7 @@ function printArrayValuesInReverse(array) {
 }let tacos = ["beef", "chicken", "shrimp"];//assign array to taco variable
 printArrayValues(tacos);//function call
   // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input Object, return an Array containing the Object keys.
