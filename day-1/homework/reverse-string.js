@@ -21,8 +21,7 @@
 
 function reverseString(input) {
   // YOUR CODE BELOW HERE //
-  function reverseString(input) {
-    // YOUR CODE BELOW HERE //
+  
   let reversed = "";
     //create storage string
   for (let i = input.length - 1; i >= 0; i--){
@@ -36,7 +35,7 @@ function reverseString(input) {
   console.log(reverseString('Johnathan'));
   //log to console to check
   // YOUR CODE ABOVE HERE //
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (

@@ -96,7 +96,7 @@ function beginsWith(string, char) {
     // YOUR CODE ABOVE HERE //
     console.log(beginsWith('Pica', 'a'));//log to console for visual
   // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String and a single character, return true if the String

@@ -12,7 +12,7 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-for (let i = 0; i < arr.length; i++ ){
+for (let i = 0; i < array.length; i++ ){
   console.log(array[i]);
 }
   // YOUR CODE ABOVE HERE //
@@ -24,8 +24,8 @@ for (let i = 0; i < arr.length; i++ ){
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  for (let i = 0; i < arr.length - 1; i--) {//check each index
-    console.log(arr[i]);//print each array value at given index
+  for (let i = array.length - 1; i >= 0; i--) {//check each index
+    console.log(array[i]);//print each array value at given index
   }
 }let tacos = ["beef", "chicken", "shrimp"];//assign array to taco variable
 printArrayValues(tacos);//function call
